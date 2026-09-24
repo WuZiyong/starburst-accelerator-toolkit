@@ -1,0 +1,20 @@
+name: starburst-comput1-cuda
+backend: cuda
+host:
+  ssh: comput1
+  expected_hostname: comput1
+hardware:
+  accelerator: NVIDIA A100-PCIE-40GB
+  configured_devices: 4
+  memory_mib: 40960
+runtime:
+  python: python
+  python_env: null
+scheduler:
+  type: slurm
+  partition: gpu
+  gres: gpu:1
+  cpus_per_task: 8
+  mem: 64G
+  job_name: accel-cuda
+  output: slurm-%j.out

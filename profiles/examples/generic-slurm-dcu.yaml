@@ -1,0 +1,14 @@
+name: generic-slurm-dcu
+backend: dcu
+host:
+  expected_hostname: dcu-node
+runtime:
+  dtk_root: /opt/dtk
+  python: python
+  python_env: /path/to/dtk-matched-project-venv
+scheduler:
+  type: slurm
+  partition: dcu
+  gres: dcu:1
+  cpus_per_task: 8
+  mem: 32G

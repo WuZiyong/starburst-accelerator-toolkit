@@ -1,0 +1,15 @@
+default_profile: starburst/comput1-cuda
+profiles:
+  - starburst/comput1-cuda
+  - starburst/comput2-dcu
+profile_overrides:
+  starburst/comput1-cuda:
+    runtime:
+      python: /path/to/cuda-env/bin/python
+      python_env: /path/to/cuda-env
+  starburst/comput2-dcu:
+    runtime:
+      python: /path/to/dcu-env/bin/python
+      python_env: /path/to/dcu-env
+training:
+  command: [python, train.py]

@@ -1,0 +1,14 @@
+name: generic-slurm-cuda
+backend: cuda
+host:
+  expected_hostname: gpu-node
+runtime:
+  cuda_root: /usr/local/cuda
+  python: python
+  python_env: /path/to/project-venv
+scheduler:
+  type: slurm
+  partition: gpu
+  gres: gpu:1
+  cpus_per_task: 8
+  mem: 32G
